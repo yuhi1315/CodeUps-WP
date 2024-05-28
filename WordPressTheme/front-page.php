@@ -4,30 +4,21 @@
       <section class="mv">
         <div class="swiper mv__swiper js-mv-swiper">
           <div class="swiper-wrapper">
+          <?php 
+            $fields = CFS()->get('mv_loop');
+            if (!empty($fields)):
+              foreach ($fields as $field): ?>
             <div class="swiper-slide">
               <img
-                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-mv1.jpg"
+                src="<?php echo $field['mv_img_pc']; ?>"
                 alt="一匹の大きな亀が海面を漂っている画像"
               />
             </div>
-            <div class="swiper-slide">
-              <img
-                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-mv2.jpg"
-                alt="１匹の大きな亀とダイバーの画像"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-mv3.jpg"
-                alt="綺麗な海と船の画像"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-mv4.jpg"
-                alt="青い空と砂浜の画像"
-              />
-            </div>
+            <?php
+              endforeach;
+          else:
+              echo 'No fields found.';
+          endif; ?>
           </div>
         </div>
         <div class="mv__title">
