@@ -1,0 +1,317 @@
+@use "global" as *;
+
+.form {
+  border-radius: rem(20) 0 0 0;
+}
+
+.form__item {
+  color: $black;
+  border-bottom: dotted; /*下線を点線にする*/
+  border-color: $green;
+  border-width: rem(1);
+  padding-bottom: rem(22);
+  @include mq("md") {
+    display: flex;
+    padding-bottom: rem(40);
+  }
+}
+
+.form__item dt {
+  font-size: rem(16);
+  line-height: 2;
+  font-weight: $bold;
+  @include mq("md") {
+    width: 39%;
+  }
+}
+.form__item dt span {
+  color: $white;
+  font-size: rem(12);
+  margin-left: rem(10);
+  background-color: #c94800;
+  padding: rem(3) rem(15);
+}
+
+.form__item:not(:first-child) {
+  margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(33);
+  }
+}
+
+.form__input {
+  width: 100%;
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: rem(2);
+    margin-left: rem(39);
+  }
+}
+
+.form__input.form__input--approval {
+  @include mq("md") {
+    margin-left: 0;
+  }
+}
+
+.form__input select {
+  width: 100%;
+}
+
+.form__label-text {
+  font-size: rem(14);
+  width: rem(181);
+  font-weight: $medium;
+  line-height: 1.6;
+  color: $black;
+}
+
+input[type="radio"] {
+  transform: scale(0.8);
+  margin: 0;
+}
+
+// お問い合わせ内容
+
+.form__text {
+  text-align: left;
+  font-family: "Noto Sans JP";
+  font-size: rem(15);
+  font-weight: $medium;
+  @include mq("md") {
+    margin-top: rem(4);
+    font-size: rem(14);
+  }
+}
+
+input[type="text"],
+input[type="textarea"] {
+  font-family: "Noto sans JP";
+  padding: rem(10);
+  background-color: $white;
+  border: rem(1) solid $green;
+  font-size: rem(16);
+  width: 100%;
+}
+
+input[type="text"]::placeholder,
+input[type="textarea"]::placeholder {
+  color: #ddf0f1;
+  opacity: 0.5;
+}
+
+input[type="textarea"] {
+  height: rem(200);
+  resize: none;
+  margin-top: rem(10);
+  @include mq("md") {
+    margin-top: 0;
+    height: rem(196);
+  }
+}
+
+.form__approval {
+  margin-top: rem(25);
+  text-align: left;
+  max-width: rem(252);
+  width: 100%;
+  margin: 0 auto;
+  @include mq("md") {
+    text-align: center;
+    max-width: 100%;
+    margin-top: rem(80);
+  }
+}
+
+.form__button {
+  text-align: center;
+  margin-top: rem(27);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__label.form__label--approval {
+  font-size: rem(14);
+}
+
+.form__label:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: rem(-23);
+  top: rem(15);
+  margin: rem(-10) 0 0 rem(-2);
+  width: rem(17);
+  height: rem(17);
+  border: rem(1) solid $green;
+}
+
+.form__label:hover:after {
+  border-color: #0171bd;
+}
+
+.form__label:after,
+.form__label:before {
+  position: absolute;
+  content: "";
+  display: block;
+}
+/*チェックマークの追加*/
+.form__label:before {
+  left: rem(-20);
+  top: rem(16);
+  margin-top: rem(-7);
+  width: rem(9);
+  height: rem(5);
+  border-bottom: rem(2) solid $red;
+  border-left: rem(2) solid $red;
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + .form__label:before {
+  opacity: 1;
+}
+
+.form__input--select select {
+  position: relative;
+}
+
+.form__input--select select::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(12) rem(6) 0 rem(6);
+  border-color: $green transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: rem(5);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.form__input--select select {
+  width: 100%;
+  padding: rem(10) rem(8);
+  -webkit-appearance: none;
+  appearance: none;
+  border: rem(1) solid $green;
+}
+
+.select-box__item::-ms-expand {
+  display: none;
+}
+
+.wpcf7-list-item {
+  display: block;
+  margin-left: 0 !important;
+}
+
+.form__input textarea {
+  font-family: "Noto sans JP";
+  padding: rem(10);
+  background-color: $white;
+  border: rem(1) solid $green;
+  font-size: rem(16);
+  width: 100%;
+}
+
+.form__button input::after {
+  z-index: 2;
+  content: "";
+  background: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.form__button input:hover {
+  color: $green;
+  span {
+    border-bottom: rem(1) solid $green;
+    border-right: rem(1) solid $green;
+  }
+}
+
+:hover::after {
+  transform: scale(1, 1);
+}
+
+/*デフォルトのスタイルを無効化する*/
+input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+span.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+  text-align: center;
+  display: inline-block;
+  font-size: rem(14);
+  color: $white;
+  width: rem(200);
+  border-radius: rem(1);
+  line-height: 1;
+  padding: rem(18) 0;
+  background-color: $green;
+  z-index: 1;
+  border: rem(1) solid $green;
+  padding-right: rem(50);
+  z-index: 2;
+  font-family: $Gotu;
+}
+
+.form__button {
+  position: relative;
+}
+
+.form__button span {
+  position: absolute;
+  top: rem(20);
+  width: rem(40);
+  height: rem(6);
+  border-bottom: rem(1) solid $white;
+  border-right: rem(1) solid $white;
+  transform: skew(45deg);
+  right: rem(100);
+  @include mq("md") {
+    right: rem(295);
+  }
+}
+
+.form__button p {
+  display: inline-block;
+  position: relative;
+}
+.form__button p::before {
+  content: "";
+  width: rem(200);
+  height: 100%;
+  position: absolute;
+  border: 1px solid $green;
+  top: rem(5);
+  left: rem(4);
+  z-index: -1;
+}
+
+.wpcf7-email,
+.wpcf7-tel {
+  width: 100%;
+  border: 1px solid $green;
+}

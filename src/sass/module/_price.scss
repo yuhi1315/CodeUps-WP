@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.price {
+  background-color: $bg-green;
+}
+
+.price__inner {
+  position: relative;
+}
+
+.price__inner::after {
+  display: none;
+  content: "";
+  background: url(../images/common/goldfish-logo.svg);
+  width: rem(437);
+  left: calc(50% - min(49vw, rem(620)));
+  bottom: rem(-41);
+  position: absolute;
+  z-index: -1;
+  background-size: contain;
+  aspect-ratio: 437 / 201;
+  transform: scale(-1, 1);
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.price__icon {
+  position: absolute;
+  bottom: rem(-41);
+  left: calc(50% - min(49vw, rem(620)));
+  width: rem(437);
+  height: rem(201);
+  transform: scale(-1, 1);
+}
+
+.price__content {
+  @include mq("md") {
+    flex-direction: row-reverse;
+    display: flex;
+    margin-top: rem(40);
+  }
+}
+
+.price__img {
+  position: relative;
+  margin-top: rem(28);
+  @include mq("md") {
+    margin-top: 0;
+    width: 45.556%;
+    margin-left: rem(93);
+  }
+}
+
+.price__img img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 345 / 227;
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
+  }
+}
+
+.price__list {
+  margin-top: rem(43);
+  @include mq("md") {
+    width: 45.556%;
+    margin-top: 0;
+  }
+}
+
+.price__item:not(:first-child) {
+  margin-top: rem(39);
+  @include mq("md") {
+    margin-top: rem(45);
+  }
+}
+
+.price__name {
+  border-bottom: rem(1) solid $green;
+  font-weight: $bold;
+}
+
+.price__info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: rem(9);
+  @include mq("md") {
+    margin-top: rem(8);
+  }
+}
+
+.plice__cource {
+  font-size: rem(14);
+  line-height: 1.7142;
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+.price__number {
+  font-size: rem(14);
+  line-height: 1.7142;
+  margin-left: rem(20);
+}
+
+.price__button {
+  width: 100%;
+  text-align: center;
+  margin-top: rem(36);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

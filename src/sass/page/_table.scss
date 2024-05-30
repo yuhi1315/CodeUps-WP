@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.table {
+  width: 72%;
+}
+
+.table__course {
+  width: 70%;
+  font-size: rem(16);
+  text-align: center;
+  @include mq("md") {
+    text-align: left;
+  }
+}
+
+.table__price {
+  width: rem(162);
+  text-align: right;
+  font-size: rem(16);
+  word-break: break-all;
+}

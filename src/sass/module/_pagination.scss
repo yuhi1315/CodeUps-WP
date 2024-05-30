@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.pagination {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagination__wrapper {
+  display: flex;
+  gap: rem(12);
+  margin: 0 rem(40);
+}
+
+.wp-pagenavi {
+  display: flex;
+  gap: rem(12);
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+  border: 1px solid $green;
+  transition: all 0.5s;
+  font-size: rem(16);
+  font-weight: bold;
+  line-height: 1;
+  padding: rem(9.3) rem(13.3);
+}
+
+.smaller,
+.larger {
+  color: $green;
+  background-color: $white;
+}
+
+.current {
+  color: $white;
+  background-color: $green;
+}
+
+// .pagination__number {
+//   padding: rem(9.3) rem(13.3);
+// }
+
+// .pagination__number.is-active {
+//   background-color: $green;
+//   color: $white;
+// }
+
+// .pagination__preview {
+//   padding: rem(10);
+// }
+
+// .pagination__next {
+//   padding: rem(10);
+// }
+
+// .pagination a:hover {
+//   background-color: $green;
+//   color: $white;
+// }

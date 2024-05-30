@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.tag-list {
+  display: flex;
+  gap: rem(16) rem(21);
+  flex-wrap: wrap; /* 折返し指定 */
+  justify-content: center;
+  @include mq("md") {
+    gap: rem(32);
+    justify-content: flex-start;
+  }
+}
+
+.tag-list__item {
+  background-color: white;
+  border: 1px solid $green;
+  width: rem(162);
+  text-align: center;
+  padding: rem(4) 0;
+  color: $green;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.tag-list__item.is-active {
+  background-color: $green;
+  color: $white;
+}
+
+.tag-list__item p {
+  display: inline-block;
+  column-gap: 20px;
+  font-size: rem(14);
+  line-height: 1.571;
+}

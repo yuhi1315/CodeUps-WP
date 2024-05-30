@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.sp-nav {
+  display: none;
+  width: 100%;
+  height: calc(100vh - rem(80));
+  background-color: $green;
+  overflow: scroll;
+}
+.sp-nav__inner {
+  display: flex;
+  padding: 0 rem(15);
+  justify-content: center;
+}
+
+.nav.is-active {
+  display: block;
+}
+
+.sp-nav__items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: rem(166);
+  width: 100%;
+}
+
+.sp-nav__items:nth-child(2) {
+  margin-left: rem(7);
+}
+
+.sp-nav__item {
+  width: 100%;
+}
+
+.sp-nav__item:not(:first-child) {
+  margin-top: rem(16);
+}
+
+.sp-nav__item a {
+  text-align: left;
+  display: block;
+  padding: rem(12) 0;
+  color: $white;
+  font-size: rem(16);
+  line-height: 1.125;
+  position: relative;
+}
+
+.sp-nav__item a:first-child {
+  font-weight: $bold;
+  text-indent: -rem(22);
+  padding-left: rem(16);
+}
+.sp-nav__item a:first-child::before {
+  position: absolute;
+  left: -5px;
+  bottom: rem(10);
+  content: "";
+  background-image: url(../images/common/starfish.svg);
+  display: inline-block;
+  height: rem(18);
+  width: rem(18);
+  width: 1rem;
+  vertical-align: middle;
+  margin-right: rem(4);
+}
+
+.sp-nav__item a:not(:first-child) {
+  text-indent: -rem(16);
+  padding-left: rem(16);
+}

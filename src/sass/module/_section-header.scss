@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.section-header {
+  text-align: center;
+}
+
+.section-header__engtitle {
+  font-size: rem(32);
+  line-height: 1.25;
+  text-align: center;
+  font-weight: normal;
+  color: $navy;
+  font-family: $Gotu;
+  &--white {
+    @include mq("md") {
+      color: $white;
+    }
+  }
+  @include mq("md") {
+    line-height: 1;
+    font-size: rem(40);
+  }
+}
+.section-header__engtitle::first-letter {
+  color: $green;
+}
+
+.section-header__engtitle--white:first-letter {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.section-header__jatitle {
+  font-size: rem(12);
+  line-height: 1.5;
+  text-align: center;
+  color: $green;
+  margin-top: rem(4);
+  &--white {
+    @include mq("md") {
+      color: $white;
+    }
+  }
+  @include mq("md") {
+    margin-top: rem(8);
+  }
+}

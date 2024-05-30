@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.bread {
+  margin-top: rem(7);
+}
+
+.bread__list {
+  display: flex;
+  font-size: rem(14);
+}
+
+.bread__item:not(:first-child)::before {
+  content: ">";
+  padding: 0 rem(4);
+}
+
+.bread__item p {
+  display: inline;
+}

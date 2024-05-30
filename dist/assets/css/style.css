@@ -313,7 +313,7 @@ a {
 
 .about-us__text-container {
 	align-items: center;
-	margin-top: 2.5rem;
+	margin-top: 2.8125rem;
 	width: 100%;
 }
 
@@ -339,14 +339,18 @@ a {
 	color: #408f95;
 	font-family: "Gotu", serif;
 	font-size: 2.5rem;
+	font-weight: bold;
 	line-height: 1;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を付ける */
 }
 
 .about-us__message {
 	color: #0d2936;
 	font-size: 1rem;
+	font-weight: bold;
 	line-height: 1.5;
 	margin-top: 1.1875rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を付ける */
 }
 
 .about-us__button {
@@ -413,7 +417,7 @@ a {
 	line-height: 1.4;
 }
 
-.sidebar__archive-content {
+.archive {
 	color: #408f95;
 	color: #408f95;
 	cursor: pointer;
@@ -3193,7 +3197,7 @@ html {
 .about-us__text-container {
 	display: flex;
 	justify-content: center;
-	left: 58%;
+	left: 50%;
 	margin-top: 1.875rem;
 	max-width: 52.5rem;
 	position: absolute;
@@ -3215,17 +3219,18 @@ html {
 }
 
 .about-us__catch-wrapper {
-	width: 47.62%;
+	width: 48%;
 }
 
 .about-us__message-wrapper {
 	margin-left: 2.5rem;
+	margin-top: 9.0625rem;
 	width: 47.7%;
 }
 
 .about-us__catch {
 	color: #fff;
-	font-size: 5rem;
+	font-size: 4.1875rem;
 	line-height: 1.25;
 }
 

@@ -28,15 +28,7 @@
       </section>
 
       <!-- campaign -->
-      <section class="campaign campaign-layout" id="campaign">
-        <div class="campaign__inner inner">
-          <div class="campaign__title section-header">
-            <h2 class="section-header__engtitle">Campaign</h2>
-            <p class="section-header__jatitle">キャンペーン</p>
-          </div>
-          <div class="swiper campaign__swiper js-campaign__swiper">
-            <div class="swiper-wrapper">
-            <?php
+      <?php
         $campaign_query = new WP_Query(
             array(
                 'post_type'      => 'campaign',
@@ -45,86 +37,99 @@
             )
         );
         if ($campaign_query->have_posts()) :
-            while ($campaign_query->have_posts()) : $campaign_query->the_post();
-            $campaign_price = get_post_meta(get_the_ID(), 'campaign_price', true);
-            $campaign_discount = get_post_meta(get_the_ID(), 'campaign_discount', true);
-            $categories = get_the_terms(get_the_ID(), 'category_cate');
-            ?>
-        <div class="campaign__item swiper-slide">
-            <a href="/campaign" class="campaign-card">
-                <figure class="campaign-card__img">
-                <img
-                src="<?php 
-                    $campaign_image = get_field('campaign_img');
-                    if ($campaign_image) {
-                        echo esc_url($campaign_image);
-                    } else {
-                        echo esc_url(get_theme_file_uri('/assets/images/common/no-img.jpeg'));
-                    }
-                ?>"
-                alt="<?php the_title(); ?>の画像"
-              />
-                </figure>
-                <div class="campaign-card__body">
-                    <div class="campaign-card__top">
-                    <span class="campaign-card__tag">
-                      <?php
-                        $terms = get_the_terms(get_the_ID(), 'campaign_cate');
-                        if (!empty($terms) && !is_wp_error($terms)) {
-                            foreach ($terms as $term) {
-                                echo '<span class="voice-card__category">' . esc_html($term->name) . '</span> ';
-                            }
-                        } else {
-                            echo 'カテゴリ未選択';
-                        }
+        ?>
+        <section class="campaign campaign-layout" id="campaign">
+            <div class="campaign__inner inner">
+                <div class="campaign__title section-header">
+                    <h2 class="section-header__engtitle">Campaign</h2>
+                    <p class="section-header__jatitle">キャンペーン</p>
+                </div>
+                <div class="swiper campaign__swiper js-campaign__swiper">
+                    <div class="swiper-wrapper">
+                        <?php
+                        while ($campaign_query->have_posts()) : $campaign_query->the_post();
+                        $campaign_price = get_post_meta(get_the_ID(), 'campaign_price', true);
+                        $campaign_discount = get_post_meta(get_the_ID(), 'campaign_discount', true);
+                        $categories = get_the_terms(get_the_ID(), 'category_cate');
                         ?>
-                  </span>
-                   <p class="campaign-card__title"><?php the_title(); ?></p>
-                    </div>
-                    <div class="campaign-card__bottom">
-                        <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                        <div class="campaign-card__price">
-                          <p class="campaign-card__price-normal">
-                              <span>
-                                  <?php 
-                                  $campaign_price = get_field('campaign_price');
-                                  echo '¥' . number_format(esc_html($campaign_price));
-                                  ?>
-                              </span>
-                          </p>
-                          <p class="campaign-card__price-discount">
-                              <?php 
-                              $campaign_discount = get_field('campaign_discount');
-                              echo '¥' . number_format(esc_html($campaign_discount));
-                              ?>
-                          </p>
-                      </div>
+                        <div class="campaign__item swiper-slide">
+                            <a href="/campaign" class="campaign-card">
+                                <figure class="campaign-card__img">
+                                    <img
+                                    src="<?php 
+                                        $campaign_image = get_field('campaign_img');
+                                        if ($campaign_image) {
+                                            echo esc_url($campaign_image);
+                                        } else {
+                                            echo esc_url(get_theme_file_uri('/assets/images/common/no-img.jpeg'));
+                                        }
+                                    ?>"
+                                    alt="<?php the_title(); ?>の画像"
+                                    />
+                                </figure>
+                                <div class="campaign-card__body">
+                                    <div class="campaign-card__top">
+                                        <span class="campaign-card__tag">
+                                            <?php
+                                            $terms = get_the_terms(get_the_ID(), 'campaign_cate');
+                                            if (!empty($terms) && !is_wp_error($terms)) {
+                                                foreach ($terms as $term) {
+                                                    echo '<span class="voice-card__category">' . esc_html($term->name) . '</span> ';
+                                                }
+                                            } else {
+                                                echo 'カテゴリ未選択';
+                                            }
+                                            ?>
+                                        </span>
+                                        <p class="campaign-card__title"><?php the_title(); ?></p>
+                                    </div>
+                                    <div class="campaign-card__bottom">
+                                        <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                                        <div class="campaign-card__price">
+                                            <p class="campaign-card__price-normal">
+                                                <span>
+                                                    <?php 
+                                                    $campaign_price = get_field('campaign_price');
+                                                    echo '¥' . number_format(esc_html($campaign_price));
+                                                    ?>
+                                                </span>
+                                            </p>
+                                            <p class="campaign-card__price-discount">
+                                                <?php 
+                                                $campaign_discount = get_field('campaign_discount');
+                                                echo '¥' . number_format(esc_html($campaign_discount));
+                                                ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <?php
+                        endwhile;
+                        ?>
                     </div>
                 </div>
-            </a>
-        </div>
-          <?php
-              endwhile;
-          else:
-          ?>
-              <span>記事はありません</span>
-          <?php
-          endif;
-
-          wp_reset_postdata();
-          ?>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="campaign__button">
+                    <a href="/campaign" class="button">
+                        View more
+                        <span></span>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="campaign__button">
-            <a href="/campaign" class="button">
-              View more
-              <span></span>
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+        <?php
+        else:
+        ?>
+            <!-- 投稿がない場合の処理（必要に応じて） -->
+        <?php
+        endif;
+
+        wp_reset_postdata();
+        ?>
+
       <!-- about us -->
       <section class="about-us about-us-layout" id="about-us">
         <div class="about-us__inner inner">
@@ -150,14 +155,14 @@
             <div class="about-us__text-container">
               <div class="about-us__catch-wrapper">
                 <p class="about-us__catch">
-                  Dive into<br />
-                  the Ocean
+                  揺らすだけの<br />
+                  DRT整体
                 </p>
               </div>
               <div class="about-us__message-wrapper">
                 <p class="about-us__message">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                DRTとは、「ダブルハンド・リコイル・テクニック」の略で、背骨をユラユラ揺らしながらゆがみを修正していく技術です。<br />
+                一般的な整体やマッサージのように、「肩が痛いから肩を揉む」「腰が痛いから腰をほぐす」といった、調子の悪い部位への直接的な施術とは異なり、神経や血液の大動脈とも言える背骨に対して、集中的に調整をかけていくDRTは、画期的な施術法として注目を集めています。
                 </p>
                 <div class="about-us__button">
                   <a href="/about-us" class="button">

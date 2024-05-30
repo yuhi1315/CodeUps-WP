@@ -1,0 +1,155 @@
+@use "global" as *;
+
+.contact {
+}
+
+.contact__inner {
+  position: relative;
+}
+
+.contact__inner::after {
+  content: "";
+  background: url(../images/common/goldfish-logo.svg);
+  width: rem(109);
+  right: rem(17);
+  top: rem(-25);
+  position: absolute;
+  z-index: -1;
+  background-size: contain;
+  aspect-ratio: 301 / 138;
+  transform: scale(-1, 1);
+  @include mq("md") {
+    display: block;
+    width: rem(301);
+    right: calc(50% - min(48vw, rem(670)));
+    top: rem(-45);
+  }
+}
+
+.contact__icon {
+  position: absolute;
+  top: rem(-25);
+  right: rem(17);
+  width: rem(109);
+  height: rem(50);
+  transform: scale(-1, 1);
+  @include mq("md") {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-45);
+    right: calc(50% - min(50vw, rem(670)));
+  }
+}
+
+.contact__container {
+  text-align: center;
+  margin: 0 rem(25);
+  @include mq("md") {
+    margin: 0;
+    display: flex;
+    padding: rem(80) rem(112) rem(80) rem(50);
+    box-shadow: rem(2) rem(2) rem(10) 0 #00000040;
+    align-items: center;
+  }
+}
+
+.contact__map {
+  @include mq("md") {
+    border-right: rem(1) solid $green;
+    width: 47.931%;
+    box-sizing: content-box;
+    padding-right: rem(82);
+  }
+}
+
+.contact__logo {
+  width: rem(174);
+  height: rem(65);
+  margin: 0 auto;
+  @include mq("md") {
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.contact__bottom {
+  border-top: rem(1) solid $green;
+  padding-top: rem(12);
+  margin-top: rem(9);
+  @include mq("md") {
+    display: flex;
+    margin-top: rem(5);
+    padding-top: rem(20);
+  }
+}
+
+.contact__address {
+  font-size: rem(16);
+  line-height: 1.75;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  min-width: 40%;
+  @include mq("md") {
+    text-align: left;
+  }
+}
+
+.contact__info {
+  margin-top: rem(2);
+}
+
+.contact__google-map {
+  margin-top: rem(16);
+  @include mq("md") {
+    width: 62.05%;
+    margin-left: rem(10);
+    margin-top: 0;
+  }
+}
+
+.contact__google-map iframe {
+  aspect-ratio: 273 / 148;
+  width: rem(295);
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.contact__message {
+  margin-top: rem(50);
+  @include mq("md") {
+    margin-top: 0;
+    margin-left: rem(81);
+  }
+}
+
+.contact__engtitle {
+  font-weight: normal;
+  font-size: rem(80);
+  line-height: 0.9;
+  font-family: $Gotu;
+}
+
+.contact__engtitle::first-letter {
+  color: $green;
+}
+
+.contact__jatitle {
+  font-size: rem(12);
+  line-height: 1.5;
+  color: $green;
+}
+
+.contact__text {
+  color: $green;
+  font-size: rem(14);
+  @include mq("md") {
+    margin-top: rem(8);
+  }
+}
+
+.contact__button {
+  width: 100%;
+  text-align: center;
+  margin-top: rem(40);
+}

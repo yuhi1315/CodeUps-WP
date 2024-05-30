@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.footer-layout {
+  margin-top: rem(107);
+  padding: rem(51) 0 rem(56);
+  @include mq("md") {
+    padding: rem(80) 0;
+    margin-top: rem(160);
+  }
+}
+
+.footer-layout.footer-layout--404 {
+  margin-top: 0;
+  padding-top: rem(96);
+  @include mq("md") {
+    padding: rem(238) 0 rem(80);
+  }
+}

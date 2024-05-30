@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.mv {
+  height: 100vh;
+  width: 100%;
+  min-height: rem(320);
+  position: relative;
+}
+
+.mv__title {
+  z-index: 888;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  letter-spacing: rem(1.5);
+}
+
+.mv__title-main {
+  font-family: $Lato;
+  font-size: rem(40);
+  letter-spacing: 0.54em;
+  text-indent: 0.54em;
+  line-height: 1.2;
+  font-weight: normal;
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: 1.25;
+  }
+}
+
+.mv__title-sub {
+  text-align: center;
+  font-size: rem(20);
+  line-height: 1.66;
+  font-family: $Gotu;
+  @include mq("md") {
+    font-size: rem(20);
+    text-align: center;
+  }
+}

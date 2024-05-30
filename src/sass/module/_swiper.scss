@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: rem(18);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: rem(1);
+  height: auto;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next {
+  display: none;
+  top: var(--swiper-navigation-top-offset, 3.3%);
+  right: rem(25);
+  border-radius: 50%;
+  border: rem(1) solid $green;
+  width: rem(80);
+  height: rem(80);
+  @include mq("md") {
+    display: flex;
+  }
+}
+.swiper-button-next:after {
+  content: "";
+  width: rem(40);
+  height: rem(6);
+  border-bottom: rem(1) solid green;
+  border-right: rem(1) solid green;
+  transform: skew(45deg);
+}
+
+.swiper-button-prev {
+  display: none;
+
+  top: var(--swiper-navigation-top-offset, 3.3%);
+  right: var(--swiper-navigation-sides-offset, rem(185));
+  left: auto;
+  border-radius: 50%;
+  border: rem(1) solid $green;
+  width: rem(80);
+  height: rem(80);
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.swiper-button-prev:after {
+  content: "";
+  width: rem(40);
+  height: rem(6);
+  border-bottom: rem(1) solid green;
+  border-left: rem(1) solid green;
+  transform: skew(-45deg);
+}
