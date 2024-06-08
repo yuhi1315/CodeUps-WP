@@ -27,7 +27,7 @@
   top: var(--swiper-navigation-top-offset, 3.3%);
   right: rem(25);
   border-radius: 50%;
-  border: rem(1) solid $green;
+  border: rem(1) solid $pink;
   width: rem(80);
   height: rem(80);
   @include mq("md") {
@@ -38,8 +38,8 @@
   content: "";
   width: rem(40);
   height: rem(6);
-  border-bottom: rem(1) solid green;
-  border-right: rem(1) solid green;
+  border-bottom: rem(1) solid $pink;
+  border-right: rem(1) solid $pink;
   transform: skew(45deg);
 }
 
@@ -50,7 +50,7 @@
   right: var(--swiper-navigation-sides-offset, rem(185));
   left: auto;
   border-radius: 50%;
-  border: rem(1) solid $green;
+  border: rem(1) solid $pink;
   width: rem(80);
   height: rem(80);
   @include mq("md") {
@@ -62,7 +62,7 @@
   content: "";
   width: rem(40);
   height: rem(6);
-  border-bottom: rem(1) solid green;
-  border-left: rem(1) solid green;
+  border-bottom: rem(1) solid $pink;
+  border-left: rem(1) solid $pink;
   transform: skew(-45deg);
 }

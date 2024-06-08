@@ -82,7 +82,7 @@ jQuery(function ($) {
     autoplay: {
       delay: 0,
     },
-    speed: 3000,
+    speed: 5000,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -195,11 +195,11 @@ $(function () {
 
 //FAQのアコーディオンメニュー
 $(function () {
-  $(".js-accordion__item:first-child .js-accordion__content").css(
-    "display",
-    "block"
-  );
-  $(".js-accordion__item:first-child .js-accordion__title").addClass("is-open");
+  // $(".js-accordion__item:first-child .js-accordion__content").css(
+  //   "display",
+  //   "block"
+  // );
+  // $(".js-accordion__item:first-child .js-accordion__title").addClass("is-open");
   $(".js-accordion__title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
@@ -291,3 +291,16 @@ window.addEventListener(
   },
   false
 );
+
+jQuery(document).ready(function ($) {
+  var clampLines = 5; // 表示する行数
+
+  $(".line-clamp").each(function () {
+    var lineHeight = parseInt($(this).css("line-height"));
+    var maxHeight = lineHeight * clampLines;
+    $(this).css({
+      "max-height": maxHeight + "px",
+      overflow: "hidden",
+    });
+  });
+});

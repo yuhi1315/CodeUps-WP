@@ -1,22 +1,7 @@
 <?php get_header(); ?>
- <!-- mv -->
- <section class="underlayer-mv">
-        <div class="underlayer-mv__img">
-          <picture>
-            <source
-              srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/voice-mv-sp.jpg"
-              media="(max-width: 640px)"
-            />
-            <img
-              src="<?php echo get_theme_file_uri(); ?>/assets/images/common/voice-mv-pc.jpg"
-              alt="海に浮かぶ5人のダイバー"
-            />
-          </picture>
-        </div>
-        <div class="underlayer-mv__title">
-          <h1 class="underlayer-mv__title-main">Voice</h1>
-        </div>
-      </section>
+  <!-- mv -->
+  <?php get_template_part('parts/underlayer') ?>
+
       <!-- wp-パンくずリスト -->
       <div class="bread">
         <ul class="bread__list inner">

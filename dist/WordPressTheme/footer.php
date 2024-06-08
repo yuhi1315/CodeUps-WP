@@ -80,7 +80,7 @@
             </ul>
             <ul class="grobal-nav__items">
               <li class="grobal-nav__item">
-                <a href="./info.html">ダイビング情報</a>
+                <a href="./info.html">DRT情報</a>
                 <a href="./info.html#tab_panel-1">ライセンス講習</a>
                 <a href="./info.html#tab_panel-2">体験ダイビング</a>
                 <a href="./info.html#tab_panel-3">ファンダイビング</a>

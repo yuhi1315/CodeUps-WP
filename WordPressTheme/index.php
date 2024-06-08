@@ -308,7 +308,7 @@
         <div class="information__inner inner">
           <div class="information__title section-header">
             <h2 class="section-header__engtitle">Information</h2>
-            <p class="section-header__jatitle">ダイビング情報</p>
+            <p class="section-header__jatitle">DRT情報</p>
           </div>
           <div class="information__container">
             <div class="information__img js-imgBg-change">

@@ -40,7 +40,7 @@
 
 .campaign-card__top {
   padding-bottom: rem(4);
-  border-bottom: rem(1) solid $green;
+  border-bottom: rem(1) solid $pink;
   text-align: left;
   flex-grow: 1;
 }
@@ -48,8 +48,8 @@
 .campaign-card__tag {
   font-size: rem(12);
   line-height: 1.83;
-  color: $green;
-  border: rem(1) solid $green;
+  color: $pink;
+  border: rem(1) solid $pink;
   padding: rem(4) rem(12);
   display: inline-block;
   @include mq("md") {
@@ -145,7 +145,7 @@
   font-weight: $bold;
   line-height: rem(32);
   margin-left: rem(16);
-  color: $green;
+  color: $pink;
   @include mq("md") {
     font-size: rem(40);
     margin-left: rem(24);
@@ -172,7 +172,7 @@
 .campaign-card__date {
   display: inline-block;
   font-family: $Lato;
-  color: $green;
+  color: $pink;
   font-size: rem(16);
   line-height: 1.125;
   font-weight: bold;
@@ -182,7 +182,7 @@
 }
 
 .campaign-card__button-message {
-  color: $green;
+  color: $pink;
   font-size: rem(14);
   line-height: 1.286;
   margin-top: rem(7);

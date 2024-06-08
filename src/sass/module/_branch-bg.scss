@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.branch-bg {
+  position: relative;
+}
+
+// .branch-bg::before {
+//   content: "";
+//   background: url(../images/common/icon-sakura.svg);
+//   width: rem(120);
+//   left: calc(50% - min(46vw, rem(635)));
+//   top: rem(-28);
+//   position: absolute;
+//   z-index: -1;
+//   aspect-ratio: 90 / 95;
+//   background-size: cover;
+//   @include mq("md") {
+//     display: block;
+//     aspect-ratio: 90 / 95;
+//     width: rem(140);
+//     left: calc(50% - min(43vw, rem(635)));
+//     top: rem(-153);
+//   }
+// }
+
+// .branch-about-us__bg::after {
+//   display: none;
+//   content: "";
+//   background: url(../images/common/icon-sakura.svg);
+//   width: rem(140);
+//   right: calc(50% - min(48vw, rem(635)));
+//   bottom: rem(-180);
+//   position: absolute;
+//   z-index: -1;
+//   aspect-ratio: 90 / 95;
+//   transform: scale(-1, 1);
+//   background-size: cover;
+//   @include mq("md") {
+//     display: block;
+//   }
+// }

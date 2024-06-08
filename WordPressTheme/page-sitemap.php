@@ -36,7 +36,7 @@
               </ul>
               <ul class="grobal-nav__items grobal-nav__items--sitemap">
                 <li class="grobal-nav__item grobal-nav__item--sitemap">
-                  <a href="/info">ダイビング情報</a>
+                  <a href="/info">DRT情報</a>
                   <a href="">ライセンス講習</a>
                   <a href="">体験ダイビング</a>
                   <a href="">ファンダイビング</a>

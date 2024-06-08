@@ -24,6 +24,7 @@
   text-indent: 0.54em;
   line-height: 1.2;
   font-weight: normal;
+  text-align: center;
   @include mq("md") {
     font-size: rem(80);
     line-height: 1.25;

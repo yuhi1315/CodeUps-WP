@@ -1,23 +1,8 @@
 <?php get_header(); ?>
  <main>
-      <!-- mv -->
-      <section class="underlayer-mv">
-        <div class="underlayer-mv__img">
-          <picture>
-            <source
-              srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/campaign-mv-sp.jpg"
-              media="(max-width: 640px)"
-            />
-            <img
-              src="<?php echo get_theme_file_uri(); ?>/assets/images/common/campaign-mv-pc.jpg"
-              alt="海と２匹の黄色い魚"
-            />
-          </picture>
-        </div>
-        <div class="underlayer-mv__title">
-          <h1 class="underlayer-mv__title-main">Campaign</h1>
-        </div>
-      </section>
+       <!-- mv -->
+     <?php get_template_part('parts/underlayer') ?>
+
       <!-- campaign -->
       <!-- wp-パンくずリスト -->
       <?php get_template_part('parts/breadcrumb') ?>

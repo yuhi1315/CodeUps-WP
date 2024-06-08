@@ -19,13 +19,13 @@
 
 .pagination-blog-detail__preview,
 .pagination-blog-detail__next {
-  color: $green;
-  border: 1px solid $green;
+  color: $pink;
+  border: 1px solid $pink;
   padding: rem(6) rem(10);
 }
 
 .pagination-blog-detail__preview:hover,
 .pagination-blog-detail__next:hover {
-  background-color: $green;
+  background-color: $pink;
   color: $white;
 }

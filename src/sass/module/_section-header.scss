@@ -22,7 +22,7 @@
   }
 }
 .section-header__engtitle::first-letter {
-  color: $green;
+  color: $pink;
 }
 
 .section-header__engtitle--white:first-letter {
@@ -35,7 +35,7 @@
   font-size: rem(12);
   line-height: 1.5;
   text-align: center;
-  color: $green;
+  color: $pink;
   margin-top: rem(4);
   &--white {
     @include mq("md") {

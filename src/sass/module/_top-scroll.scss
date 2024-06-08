@@ -9,7 +9,7 @@
   bottom: rem(10);
   cursor: pointer;
   border-radius: 50%;
-  border: rem(1) solid $green;
+  border: rem(1) solid $pink;
   width: rem(48);
   height: rem(48);
   transform: rotate(269deg);
@@ -27,8 +27,8 @@
   content: "";
   width: rem(28);
   height: rem(6);
-  border-bottom: solid rem(1) $green;
-  border-right: solid rem(1) $green;
+  border-bottom: solid rem(1) $pink;
+  border-right: solid rem(1) $pink;
   transform: skew(45deg);
   top: rem(19);
   left: rem(7);

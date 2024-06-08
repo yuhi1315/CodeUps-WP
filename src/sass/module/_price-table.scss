@@ -10,7 +10,7 @@
 
 .price-item__title {
   flex-direction: row-reverse;
-  background-color: $green;
+  background-color: $pink;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@
 }
 
 .price-item__list {
-  border: rem(1) solid $green;
+  border: rem(1) solid $pink;
 }
 
 .price-item__item {
@@ -51,7 +51,7 @@
 }
 
 .price-item__item:not(:last-child) {
-  border-bottom: 1px solid $green;
+  border-bottom: 1px solid $pink;
 }
 
 .table__price {
@@ -62,7 +62,7 @@
   border-collapse: collapse;
 }
 .price-item__table.price-item__table td {
-  border: 1px solid $green;
+  border: 1px solid $pink;
   padding: rem(8) rem(16);
   @include mq("md") {
     padding: rem(18) rem(16) rem(16);

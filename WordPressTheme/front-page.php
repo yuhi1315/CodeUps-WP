@@ -2,6 +2,7 @@
     <main>
       <!-- mv -->
       <section class="mv">
+
         <div class="swiper mv__swiper js-mv-swiper">
           <div class="swiper-wrapper">
           <?php 
@@ -22,8 +23,7 @@
           </div>
         </div>
         <div class="mv__title">
-          <h2 class="mv__title-main">DIVING</h2>
-          <p class="mv__title-sub">into&nbsp;the&nbsp;ocean</p>
+          <h2 class="mv__title-main">柔揉み整体</br>松の実</h2>
         </div>
       </section>
 
@@ -180,7 +180,7 @@
         <div class="information__inner inner">
           <div class="information__title section-header">
             <h2 class="section-header__engtitle">Information</h2>
-            <p class="section-header__jatitle">ダイビング情報</p>
+            <p class="section-header__jatitle">DRT情報</p>
           </div>
           <div class="information__container">
             <div class="information__img js-imgBg-change">
@@ -190,10 +190,10 @@
               />
             </div>
             <div class="information__content">
-              <p class="information__text">ライセンス講習</p>
+              <p class="information__text">DRT整体</p>
               <p class="information__message">
-                当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />
-                正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+                背骨を揺するだけで身体の不調を緩和する不思議な整体です。<br />
+                効果を実感いただくために月に一回のメンテナンスを推奨しております。
               </p>
               <div class="information__button">
                 <a href="/info" class="button">
@@ -283,6 +283,7 @@
       </section>
 
       <!-- voice -->
+      
       <section class="voice voice-layout" id="voice">
         <div class="voice__inner inner">
           <div class="voice__title section-header">

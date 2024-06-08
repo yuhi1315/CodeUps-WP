@@ -35,7 +35,7 @@
 }
 
 .blog-card__top {
-  border-bottom: rem(1) solid $green;
+  border-bottom: rem(1) solid $pink;
   margin-top: rem(17);
   @include mq("md") {
     text-align-last: left;
@@ -58,6 +58,10 @@
   width: 100%;
   text-align: center;
   margin-top: rem(18);
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* 表示する行数 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .blog-card__text {

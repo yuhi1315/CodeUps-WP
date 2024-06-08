@@ -2,23 +2,8 @@
  <!-- mv -->
  <main>
       <!-- mv -->
-      <section class="underlayer-mv">
-        <div class="underlayer-mv__img">
-          <picture>
-            <source
-              srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/faq-mv-sp.jpg"
-              media="(max-width: 640px)"
-            />
-            <img
-              src="<?php echo get_theme_file_uri(); ?>/assets/images/common/faq-mv-pc.jpg"
-              alt="砂浜とあおい海"
-            />
-          </picture>
-        </div>
-        <div class="underlayer-mv__title">
-          <h1 class="underlayer-mv__title-main">FAQ</h1>
-        </div>
-      </section>
+      <?php get_template_part('parts/underlayer') ?>
+
       <!-- wp-パンくずリスト -->
       <?php get_template_part('parts/breadcrumb') ?>
       <div class="branch-faq branch-faq-layout" id="faq">

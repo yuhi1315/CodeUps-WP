@@ -7,7 +7,7 @@
 .sidebar__title {
   display: flex;
   align-items: center;
-  border-left: 8px solid $green;
+  border-left: 8px solid $pink;
 }
 
 .sidebar__title img {
@@ -113,12 +113,12 @@
 .sidebar__archive-year p {
   margin-left: rem(8);
   font-size: rem(24);
-  color: $green;
+  color: $pink;
 }
 
 .triangle {
   display: block;
-  background: $green;
+  background: $pink;
   height: calc(tan(60deg) * 24px / 2);
   width: rem(24);
   clip-path: polygon(0 0, 100% 50%, 0 100%);
@@ -126,7 +126,7 @@
 
 .triangle.is-active {
   display: block;
-  background: $green;
+  background: $pink;
   height: calc(tan(60deg) * 24px / 2);
   width: rem(24);
   clip-path: polygon(0 0, 100% 0, 50% 100%);

@@ -15,23 +15,23 @@
   position: relative;
 }
 
-.branch-price__inner::after {
-  content: "";
-  background: url(../images/common/goldfish-logo.svg);
-  width: rem(120);
-  left: calc(50% - min(46vw, rem(635)));
-  top: rem(-70);
-  position: absolute;
-  z-index: -1;
-  aspect-ratio: 120 / 55;
-  background-size: contain;
-  @include mq("md") {
-    display: block;
-    aspect-ratio: 301 / 138;
-    width: rem(301);
-    left: calc(50% - min(43vw, rem(635)));
-  }
-}
+// .branch-price__inner::after {
+//   content: "";
+//   background: url(../images/common/icon-sakura.svg);
+//   width: rem(120);
+//   left: calc(50% - min(46vw, rem(635)));
+//   top: rem(-70);
+//   position: absolute;
+//   z-index: -1;
+//   aspect-ratio: 120 / 55;
+//   background-size: contain;
+//   @include mq("md") {
+//     display: block;
+//     aspect-ratio: 301 / 138;
+//     width: rem(301);
+//     left: calc(50% - min(43vw, rem(635)));
+//   }
+// }
 
 .branch-price__content {
 }

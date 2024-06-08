@@ -181,3 +181,13 @@ function change_campaign_taxonomy_posts_per_page($query) {
     }
 }
 add_action('pre_get_posts', 'change_campaign_taxonomy_posts_per_page');
+
+function custom_excerpt_length($length) {
+    return 50; // 抜粋の単語数を設定（例：20単語）
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+function custom_excerpt_more($more) {
+    return '...'; // 抜粋の末尾に表示するテキスト
+}
+add_filter('excerpt_more', 'custom_excerpt_more');

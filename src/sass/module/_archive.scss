@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .archive {
-  color: $green;
+  color: $pink;
   font-size: rem(24);
-  color: $green;
+  color: $pink;
   cursor: pointer;
 }
 
@@ -25,7 +25,7 @@
   height: 0;
   border-style: solid;
   border-width: rem(19.1) rem(11) 0 rem(11);
-  border-color: $green transparent transparent transparent;
+  border-color: $pink transparent transparent transparent;
   transform: translateY(-50%) rotate(0);
   transition: 0.4s;
 }
@@ -55,7 +55,7 @@
   height: 0;
   border-style: solid;
   border-width: rem(19.1) rem(11) 0 rem(11);
-  border-color: $green transparent transparent transparent;
+  border-color: $pink transparent transparent transparent;
   transform: translateY(-50%) rotate(-90deg);
   transition: 0.4s;
 }

@@ -1,23 +1,8 @@
 <?php get_header(); ?>
     <main>
       <!-- mv -->
-      <section class="underlayer-mv">
-        <div class="underlayer-mv__img">
-          <picture>
-            <source
-              srcset="./assets/images/common/blog-list-mv-sp.jpg"
-              media="(max-width: 640px)"
-            />
-            <img
-              src="<?php echo get_theme_file_uri(); ?>/assets/images/common/blog-list-mv-pc.jpg"
-              alt="小魚の群れ"
-            />
-          </picture>
-        </div>
-        <div class="underlayer-mv__title">
-          <h2 class="underlayer-mv__title-main">Blog</h2>
-        </div>
-      </section>
+     <?php get_template_part('parts/underlayer') ?>
+
       <!-- wp-パンくずリスト -->
       <?php get_template_part('parts/breadcrumb') ?>
       <!-- メインコンテンツ -->
@@ -43,11 +28,11 @@
                         <span class="blog-card__time">2023.11/17</span>
                         <p class="blog-card__title"><?php the_title(); ?></p>
                       </div>
-                      <div class="blog-card__bottom">
+                      <div class="blog-card__bottom line-clamp">
                         <p class="blog-card__text">
-                        <?php the_content(); ?>
+                        <?php the_excerpt(); ?>
                         </p>
-                      </div>
+                    </div>
                     </div>
                   </a>
                 </li>

@@ -20,7 +20,7 @@
 
 .wp-pagenavi a,
 .wp-pagenavi span {
-  border: 1px solid $green;
+  border: 1px solid $pink;
   transition: all 0.5s;
   font-size: rem(16);
   font-weight: bold;
@@ -30,13 +30,13 @@
 
 .smaller,
 .larger {
-  color: $green;
+  color: $pink;
   background-color: $white;
 }
 
 .current {
   color: $white;
-  background-color: $green;
+  background-color: $pink;
 }
 
 // .pagination__number {
@@ -44,7 +44,7 @@
 // }
 
 // .pagination__number.is-active {
-//   background-color: $green;
+//   background-color: $pink;
 //   color: $white;
 // }
 
@@ -57,6 +57,6 @@
 // }
 
 // .pagination a:hover {
-//   background-color: $green;
+//   background-color: $pink;
 //   color: $white;
 // }

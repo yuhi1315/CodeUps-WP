@@ -17,14 +17,14 @@
 .blog__inner::after {
   display: none;
   content: "";
-  background: url(../images/common/goldfish-logo.svg);
-  width: rem(437);
+  background: url(../images/common/icon-sakura.svg);
+  width: rem(140);
   left: calc(50% - min(49vw, rem(620)));
   top: rem(-72);
   position: absolute;
   z-index: -1;
   background-size: contain;
-  aspect-ratio: 437 / 201;
+  aspect-ratio: 90 / 95;
   filter: brightness(0) invert(1);
   transform: scale(-1, 1);
   @include mq("md") {

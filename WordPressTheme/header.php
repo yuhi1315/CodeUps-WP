@@ -14,7 +14,7 @@
         <h1 class="header__name">
           <a href="/">
             <img
-              src="<?php echo get_theme_file_uri(); ?>/assets/images/common/CodeUps-logo.svg"
+             src="<?php echo get_theme_file_uri(); ?>/assets/images/common/matsunomi-logo.png"
               alt="CodeUpsのロゴ"
               class="header__logo"
             />
@@ -24,12 +24,12 @@
         <nav class="header__pc-nav pc-nav js-pc-nav md-show">
           <div class="pc-nav__inner">
             <ul class="pc-nav__items">
-              <li class="pc-nav__item">
+              <!-- <li class="pc-nav__item">
                 <a href="/campaign">
                   <p class="pc-nav__title">Campaign</p>
                   <span class="pc-nav__sub-title">キャンペーン</span>
                 </a>
-              </li>
+              </li> -->
               <li class="pc-nav__item">
                 <a href="/about-us">
                   <p class="pc-nav__title">About us</p>
@@ -39,7 +39,7 @@
               <li class="pc-nav__item">
                 <a href="/info">
                   <p class="pc-nav__title">Information</p>
-                  <span class="pc-nav__sub-title">ダイビング情報</span>
+                  <span class="pc-nav__sub-title">DRT情報</span>
                 </a>
               </li>
 
@@ -86,20 +86,20 @@
       <nav class="header__sp-nav sp-nav js-sp-nav">
         <div class="sp-nav__inner">
           <ul class="sp-nav__items">
-            <li class="sp-nav__item">
+            <!-- <li class="sp-nav__item">
               <a href="/campaign">キャンペーン</a>
               <a href="/campaign">ライセンス取得</a>
               <a href="/campaign">貸切体験ダイビング</a>
               <a href="/campaign">ナイトダイビング</a>
-            </li>
+            </li> -->
             <li class="sp-nav__item">
               <a href="/about-us">私たちについて</a>
             </li>
             <li class="sp-nav__item">
-              <a href="/info">ダイビング情報</a>
-              <a href="/info#tab_panel-1">ライセンス講習</a>
-              <a href="/info#tab_panel-2">体験ダイビング</a>
-              <a href="/info#tab_panel-3">ファンダイビング</a>
+              <a href="/info">DRT情報</a>
+              <a href="/info#tab_panel-1">DRT整体</a>
+              <a href="/info#tab_panel-2">女性用DRT</a>
+              <a href="/info#tab_panel-3">O脚矯正</a>
             </li>
             <li class="sp-nav__item">
               <a href="/blog">ブログ</a>
@@ -111,9 +111,9 @@
             </li>
             <li class="sp-nav__item">
               <a href="/price">料金一覧</a>
-              <a href="/price">ライセンス講習</a>
-              <a href="/price">体験ダイビング</a>
-              <a href="/price">ファンダイビング</a>
+              <a href="/price">DRT整体</a>
+              <a href="/price">女性用DRT</a>
+              <a href="/price">O脚矯正</a>
             </li>
             <li class="sp-nav__item">
               <a href="/faq">よくある質問</a>
