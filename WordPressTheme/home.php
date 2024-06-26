@@ -84,32 +84,50 @@
                 </div>
               </div>
               <!-- 口コミ -->
-              <div class="sidebar__review">
+              <!-- <div class="sidebar__review">
                 <div class="sidebar__title">
-                  <img
-                    src="<?php echo get_theme_file_uri(); ?>/assets/images/common/info-wheal-logo.svg"
-                    alt=""
-                  />
-                  <h2>口コミ</h2>
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/info-wheal-logo.svg" alt="" />
+                    <h2>口コミ</h2>
                 </div>
+                <?php
+                // 口コミのカスタム投稿タイプから投稿を取得する
+                $args = array(
+                    'post_type' => 'voice', // カスタム投稿タイプが'review'であることを想定
+                    'posts_per_page' => 1, // 表示する口コミの数
+                );
+                $voice_query = new WP_Query($args);
+                if ($voice_query->have_posts()) :
+                    while ($voice_query->have_posts()) : $voice_query->the_post();
+                        // カスタムフィールドから年齢と画像IDを取得することを想定
+                        $voice_age = get_post_meta(get_the_ID(), 'voice_age', true);
+                        $voice_image_id = get_post_meta(get_the_ID(), 'voice_image', true);
+                        $voice_image_url = wp_get_attachment_url($voice_image_id); // 画像URLを取得
+                ?>
                 <div class="sidebar__review-item">
-                  <div class="sidebar__review-img">
-                    <img
-                      src="<?php echo get_theme_file_uri(); ?>/assets/images/common/review.jpg"
-                      alt="仲睦まじいカップルの画像"
-                    />
-                  </div>
-                  <p class="sidebar__review-age">30代(カップル)</p>
-                  <p class="sidebar__review-title">
-                    ここにタイトルが入ります。ここにタイトル
-                  </p>
-                  <div class="sidebar__review-button">
-                    <a href="" class="button">View more<span></span></a>
-                  </div>
+                    <div class="sidebar__review-img">
+                        <?php if ($voice_image_url) : ?>
+                            <img src="<?php echo esc_url($voice_image_url); ?>" alt="<?php the_title_attribute(); ?>" />
+                        <?php else : ?>
+                            <p>画像がありません</p>
+                        <?php endif; ?>
+                    </div>
+                    <p class="sidebar__review-age"><?php echo esc_html($voice_age); ?></p>
+                    <p class="sidebar__review-title"><?php the_title(); ?></p>
+                    <div class="sidebar__review-button">
+                        <a href="<?php the_permalink(); ?>" class="button">View more<span></span></a>
+                    </div>
                 </div>
-              </div>
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    echo '<p>口コミはまだありません。</p>';
+                endif;
+                ?>
+            </div> -->
+
               <!-- キャンペーン -->
-              <div class="sidebar__campaign">
+              <!-- <div class="sidebar__campaign">
                 <div class="sidebar__title">
                   <img
                     src="<?php echo get_theme_file_uri(); ?>/assets/images/common/info-wheal-logo.svg"
@@ -206,7 +224,7 @@
                 <div class="sidebar__campaign-button">
                   <a href="" class="button">View more</a>
                 </div>
-              </div>
+              </div> -->
               <!-- アーカイブ -->
               <div class="sidebar__archive">
                 <div class="sidebar__title">
