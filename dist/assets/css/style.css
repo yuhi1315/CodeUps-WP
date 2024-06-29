@@ -2008,6 +2008,30 @@ span.wpcf7-spinner {
 	object-fit: contain;
 }
 
+.loading {
+	background: #fff;
+	color: #fff;
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 9999999999;
+}
+
+.loading_logo {
+	color: black;
+	display: none;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loading_logo img {
+	height: 300px;
+	width: 300px;
+}
+
 .mv {
 	height: 100vh;
 	min-height: 20rem;
@@ -2106,6 +2130,19 @@ span.wpcf7-spinner {
 .current {
 	background-color: #fea3aa;
 	color: #fff;
+}
+
+#particles-mv {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 100000;
+}
+
+#particles-section {
+	height: calc(100% - 93.75rem);
+	position: absolute;
+	width: 100%;
 }
 
 .pc-nav {

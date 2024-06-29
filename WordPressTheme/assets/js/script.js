@@ -12,27 +12,35 @@ jQuery(function ($) {
         pageTop.fadeOut();
       }
       var scrollHeight = $(document).height(); /* ページ全体の高さ */
-      var scrollPosition = $(window).height() + $(window).scrollTop(); /* ページの一番上からスクロールされた距離 */
+      var scrollPosition =
+        $(window).height() +
+        $(window).scrollTop(); /* ページの一番上からスクロールされた距離 */
       var footerPaddingTop = parseInt($("footer").css("padding-top"));
       var footerPaddingBottom = parseInt($("footer").css("padding-bottom"));
-      var footHeight = $("footer").height() + footerPaddingTop + footerPaddingBottom; /* フッターの高さ */
+      var footHeight =
+        $("footer").height() +
+        footerPaddingTop +
+        footerPaddingBottom; /* フッターの高さ */
 
       if (scrollHeight - scrollPosition <= footHeight) {
         $(".top-scroll").css({
           position: "absolute",
-          bottom: 15 + footHeight
+          bottom: 15 + footHeight,
         });
       } else {
         $(".top-scroll").css({
           position: "fixed",
-          bottom: "10px"
+          bottom: "10px",
         });
       }
     });
     pageTop.click(function () {
-      $("body, html").animate({
-        scrollTop: 0
-      }, 300);
+      $("body, html").animate(
+        {
+          scrollTop: 0,
+        },
+        300
+      );
       return false;
     });
   }
@@ -47,13 +55,13 @@ jQuery(function ($) {
         // もし overflow が hidden なら、body のスタイルを元に戻す
         $("body").css({
           height: "",
-          overflow: ""
+          overflow: "",
         });
       } else {
         // そうでなければ、body に height: 100% と overflow: hidden を設定し、スクロールを無効にする
         $("body").css({
           height: "100%",
-          overflow: "hidden"
+          overflow: "hidden",
         });
       }
     });
@@ -80,45 +88,45 @@ jQuery(function ($) {
     effect: "fade",
     loop: true,
     autoplay: {
-      delay: 0
+      delay: 0,
     },
     speed: 5000,
     pagination: {
       el: ".swiper-pagination",
-      clickable: true
+      clickable: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
+      prevEl: ".swiper-button-prev",
+    },
   });
   var campaign__swiper = new Swiper(".js-campaign__swiper", {
     loop: true,
     loopAdditionalSlides: 2,
     pagination: {
       el: ".swiper-pagination",
-      type: "progressbar"
+      type: "progressbar",
     },
     spaceBetween: 24,
     slidesPerView: "1.26",
     speed: 4000,
     autoplay: {
-      delay: 0
+      delay: 0,
     },
     breakpoints: {
       765: {
         slidesPerView: 2.5,
-        spaceBetween: 40
+        spaceBetween: 40,
       },
       1440: {
         slidesPerView: 3.5,
-        spaceBetween: 40
-      }
+        spaceBetween: 40,
+      },
     },
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
+      prevEl: ".swiper-button-prev",
+    },
   });
 
   // 画像のスクロールアニメーション
@@ -134,18 +142,27 @@ jQuery(function ($) {
     // inview を使って背景色が画面に現れたら処理をする
     color.on("inview", function () {
       if (counter == 0) {
-        $(this).delay(200).animate({
-          width: "100%"
-        }, speed, function () {
-          image.css("opacity", "1");
-          $(this).css({
-            left: "0",
-            right: "auto"
-          });
-          $(this).animate({
-            width: "0%"
-          }, speed);
-        });
+        $(this)
+          .delay(200)
+          .animate(
+            {
+              width: "100%",
+            },
+            speed,
+            function () {
+              image.css("opacity", "1");
+              $(this).css({
+                left: "0",
+                right: "auto",
+              });
+              $(this).animate(
+                {
+                  width: "0%",
+                },
+                speed
+              );
+            }
+          );
         counter = 1;
       }
     });
@@ -245,27 +262,36 @@ function scrollToTab() {
   var headerHeight = $("header").height();
   var targetPostion = $(".tab__button").offset().top;
   var pos = targetPostion - headerHeight;
-  $("body,html").animate({
-    scrollTop: pos
-  }, 500);
+  $("body,html").animate(
+    {
+      scrollTop: pos,
+    },
+    500
+  );
   return false;
 }
 //info リンク遷移時に、タブ位置までスクロール
 
 function scrollToInfoTab() {
   var pos = $(".tab__button").offset().top - $("header").height() - 30;
-  $("body,html").animate({
-    scrollTop: pos
-  }, 500);
+  $("body,html").animate(
+    {
+      scrollTop: pos,
+    },
+    500
+  );
   return false;
 }
 function scrollToPriceBlock(hash) {
   var headerHeight = $("header").height();
   var blockPos = $(hash).offset().top;
   var scrollPos = blockPos - headerHeight;
-  $("body,html").animate({
-    scrollTop: scrollPos
-  }, 500);
+  $("body,html").animate(
+    {
+      scrollTop: scrollPos,
+    },
+    500
+  );
   return false;
 }
 if (location.hash.includes("tab_panel")) {
@@ -276,15 +302,19 @@ if (location.hash.includes("price")) {
   var hash = location.hash;
   scrollToPriceBlock(hash);
 }
-window.addEventListener("hashchange", function () {
-  if (window.location.hash.includes("tab")) {
-    scrollToInfoTab();
-    onLoadTabChange();
-  } else {
-    var _hash = location.hash;
-    scrollToPriceBlock(_hash);
-  }
-}, false);
+window.addEventListener(
+  "hashchange",
+  function () {
+    if (window.location.hash.includes("tab")) {
+      scrollToInfoTab();
+      onLoadTabChange();
+    } else {
+      var _hash = location.hash;
+      scrollToPriceBlock(_hash);
+    }
+  },
+  false
+);
 jQuery(document).ready(function ($) {
   var clampLines = 5; // 表示する行数
 
@@ -293,7 +323,103 @@ jQuery(document).ready(function ($) {
     var maxHeight = lineHeight * clampLines;
     $(this).css({
       "max-height": maxHeight + "px",
-      overflow: "hidden"
+      overflow: "hidden",
     });
   });
+});
+
+// ParticlesJSの初期化関数
+function initParticlesJS(elementId) {
+  if ($("#" + elementId).length) {
+    particlesJS(elementId, {
+      particles: {
+        number: {
+          value: elementId === "particles-section" ? 15 : 30,
+          density: {
+            enable: true,
+            value_area: 1121.6780303333778,
+          },
+        },
+        color: {
+          value: "#fff",
+        },
+        shape: {
+          type: "image",
+          stroke: {
+            width: 0,
+          },
+          image: {
+            src: "https://firebasestorage.googleapis.com/v0/b/react-image-sample.appspot.com/o/flower.png?alt=media&token=4784fabf-ca7f-49cf-978b-4097f5e7c87a",
+            width: 120,
+            height: 120,
+          },
+        },
+        opacity: {
+          value: 0.06409588744762158,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false,
+          },
+        },
+        size: {
+          value: 10,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 4,
+            size_min: 0.1,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: false,
+        },
+        move: {
+          enable: true,
+          speed: 5,
+          direction: "bottom-right",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 281.9177489524316,
+            rotateY: 127.670995809726,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: false,
+          },
+          onclick: {
+            enable: false,
+          },
+          resize: true,
+        },
+      },
+      retina_detect: false,
+    });
+  }
+}
+
+// ドキュメントの準備ができたらParticlesJSを各セクションに適用
+$(document).ready(function () {
+  var sections = ["particles-loading", "particles-mv", "particles-section"];
+  sections.forEach(function (section) {
+    initParticlesJS(section);
+  });
+});
+
+$(window).on("load", function () {
+  $(".loading_logo").fadeIn(3000);
+  $(".loading")
+    .delay(3000)
+    .fadeOut("slow", function () {});
 });

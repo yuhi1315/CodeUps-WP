@@ -1,8 +1,16 @@
+<div class="loading" id="particles-loading">
+  <div class="loading_logo">
+  <img
+    src="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-logo.png"
+    alt="松の実整体のロゴ"
+  />
+  </div>
+</div>
 <?php get_header(); ?>
     <main>
       <!-- mv -->
-      <section class="mv">
-
+     <section class="mv">
+     <div class="particles-js" id="particles-mv"></div>
         <div class="swiper mv__swiper js-mv-swiper">
           <div class="swiper-wrapper">
           <?php 
@@ -131,6 +139,7 @@
         ?>
 
       <!-- about us -->
+      <div class="particles-js" id="particles-section"></div>
       <section class="about-us about-us-layout" id="about-us">
         <div class="about-us__inner inner">
           <div class="about-us__title section-header">

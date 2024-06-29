@@ -17,6 +17,8 @@ function custom_enqueue_styles_scripts() {
     // 独自のjQueryプラグイン（inview） 
     wp_enqueue_script('jquery-inview', get_theme_file_uri('/assets/js/jquery.inview.min.js'), array('jquery'), filemtime(get_theme_file_path('/assets/js/jquery.inview.min.js')), true);
 
+    wp_enqueue_script('particles', 'https://cdn.jsdelivr.net/npm/particles.js@2/particles.min.js', array('jquery'), null, true);
+
     // 独自のスクリプト
     wp_enqueue_script('theme-scripts', get_theme_file_uri('/assets/js/script.js'), array('jquery'), '1.0.0', true);
 }
