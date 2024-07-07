@@ -32,45 +32,45 @@
               </li> -->
               <li class="pc-nav__item">
                 <a href="/about-us">
-                  <p class="pc-nav__title">About us</p>
-                  <span class="pc-nav__sub-title">私たちについて</span>
+                  <p class="pc-nav__title">私たちについて</p>
+                  <span class="pc-nav__sub-title">About us</span>
                 </a>
               </li>
               <li class="pc-nav__item">
                 <a href="/info">
-                  <p class="pc-nav__title">Information</p>
-                  <span class="pc-nav__sub-title">DRT情報</span>
+                  <p class="pc-nav__title">DRT情報</p>
+                  <span class="pc-nav__sub-title">Information</span>
                 </a>
               </li>
 
               <li class="pc-nav__item">
                 <a href="<?php echo home_url('/blog'); ?>">
-                  <p class="pc-nav__title">Blog</p>
-                  <span class="pc-nav__sub-title">ブログ</span>
+                  <p class="pc-nav__title">ブログ</p>
+                  <span class="pc-nav__sub-title">Blog</span>
                 </a>
               </li>
               <li class="pc-nav__item">
                 <a href="/voice">
-                  <p class="pc-nav__title">Voice</p>
-                  <span class="pc-nav__sub-title">お客様の声</span>
+                  <p class="pc-nav__title">お客様の声</p>
+                  <span class="pc-nav__sub-title">Voice</span>
                 </a>
               </li>
               <li class="pc-nav__item">
                 <a href="/price">
-                  <p class="pc-nav__title">Price</p>
-                  <span class="pc-nav__sub-title">料金一覧</span>
+                  <p class="pc-nav__title">料金一覧</p>
+                  <span class="pc-nav__sub-title">Price</span>
                 </a>
               </li>
               <li class="pc-nav__item">
                 <a href="/faq">
-                  <p class="pc-nav__title">FAQ</p>
-                  <span class="pc-nav__sub-title">よくある質問</span>
+                  <p class="pc-nav__title">よくある質問</p>
+                  <span class="pc-nav__sub-title">FAQ</span>
                 </a>
               </li>
               <li class="pc-nav__item">
                 <a href="/contact">
-                  <p class="pc-nav__title">Contact</p>
-                  <span class="pc-nav__sub-title">お問い合わせ</span>
+                  <p class="pc-nav__title">お問い合わせ</p>
+                  <span class="pc-nav__sub-title">Contact</span>
                 </a>
               </li>
             </ul>

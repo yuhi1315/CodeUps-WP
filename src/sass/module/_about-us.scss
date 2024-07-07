@@ -145,9 +145,9 @@
   line-height: 1;
   color: $pink;
   font-family: $Gotu;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を付ける */
   font-weight: bold;
   @include mq("md") {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を付ける */
     line-height: 1.25;
     font-size: rem(67);
     color: $white;
@@ -159,9 +159,9 @@
   font-size: rem(16);
   color: $navy;
   margin-top: rem(19);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を付ける */
   font-weight: bold;
   @include mq("md") {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を付ける */
     margin-top: 0;
     color: $white;
   }

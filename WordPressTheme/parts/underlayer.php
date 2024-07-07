@@ -15,21 +15,21 @@
         <h2 class="underlayer-mv__title-main">
             <?php 
                 if (is_post_type_archive('campaign')) {
-                    echo 'Campaign';
+                    echo 'キャンペーン';
                 } elseif (is_post_type_archive('voice')) {
-                    echo 'Voice';
+                    echo 'お客様の声';
                 } elseif (is_home()) {
-                    echo 'Blog';
+                    echo 'ブログ';
                 } elseif (is_page('about-us')) {
-                    echo 'About-us';
+                    echo '私たちについて';
                 } elseif (is_page('contact')) {
-                    echo 'Contact';
+                    echo 'お問い合わせ';
                 } elseif (is_page('faq')) {
-                    echo 'Faq';
+                    echo 'よくあるご質問';
                 } elseif (is_page('info')) {
-                    echo 'Information';
+                    echo 'DRT情報';
                 } elseif (is_page('price')) {
-                    echo 'Price';
+                    echo '料金';
                 } else {
                     echo 'Information';
                 }

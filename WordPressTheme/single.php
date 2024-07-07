@@ -121,7 +121,7 @@
                     ここにタイトルが入ります。ここにタイトル
                   </p>
                   <div class="sidebar__review-button">
-                    <a href="" class="button">View more<span></span></a>
+                    <a href="" class="button">詳細はこちら<span></span></a>
                   </div>
                 </div>
               </div>
@@ -221,7 +221,7 @@
                   </a>
                 </div>
                 <div class="sidebar__campaign-button">
-                  <a href="" class="button">View more</a>
+                  <a href="" class="button">詳細はこちら</a>
                 </div>
               </div>
               <!-- アーカイブ -->

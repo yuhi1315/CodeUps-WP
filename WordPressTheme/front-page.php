@@ -49,8 +49,8 @@
         <section class="campaign campaign-layout" id="campaign">
             <div class="campaign__inner inner">
                 <div class="campaign__title section-header">
-                    <h2 class="section-header__engtitle">Campaign</h2>
-                    <p class="section-header__jatitle">キャンペーン</p>
+                    <h2 class="section-header__engtitle">キャンペーン</h2>
+                    <p class="section-header__jatitle">campaign</p>
                 </div>
                 <div class="swiper campaign__swiper js-campaign__swiper">
                     <div class="swiper-wrapper">
@@ -122,7 +122,7 @@
                 <div class="swiper-button-prev"></div>
                 <div class="campaign__button">
                     <a href="/campaign" class="button">
-                        View more
+                        詳細はこちら
                         <span></span>
                     </a>
                 </div>
@@ -143,8 +143,8 @@
       <section class="about-us about-us-layout" id="about-us">
         <div class="about-us__inner inner">
           <div class="about-us__title section-header">
-            <h2 class="section-header__engtitle">About us</h2>
-            <p class="section-header__jatitle">私たちについて</p>
+            <h2 class="section-header__engtitle">私たちについて</h2>
+            <p class="section-header__jatitle">About us</p>
           </div>
           <div class="about-us__container">
             <div class="about-us__img-container">
@@ -175,7 +175,7 @@
                 </p>
                 <div class="about-us__button">
                   <a href="/about-us" class="button">
-                    View more
+                    詳細はこちら
                     <span></span>
                   </a>
                 </div>
@@ -188,8 +188,8 @@
       <section class="information information-layout" id="information">
         <div class="information__inner inner">
           <div class="information__title section-header">
-            <h2 class="section-header__engtitle">Information</h2>
-            <p class="section-header__jatitle">DRT情報</p>
+            <h2 class="section-header__engtitle">DRT情報</h2>
+            <p class="section-header__jatitle">information</p>
           </div>
           <div class="information__container">
             <div class="information__img js-imgBg-change">
@@ -206,7 +206,7 @@
               </p>
               <div class="information__button">
                 <a href="/info" class="button">
-                  View more
+                  詳細はこちら
                   <span></span>
                 </a>
               </div>
@@ -222,10 +222,10 @@
             <h2
               class="section-header__engtitle section-header__engtitle--white"
             >
-              Blog
+              ブログ
             </h2>
             <p class="section-header__jatitle section-header__jatitle--white">
-              ブログ
+              Blog
             </p>
           </div>
           <ul class="blog__list blog-cards">
@@ -284,7 +284,7 @@
           </ul>
           <div class="blog__button">
             <a href="/blog-list" class="button">
-              View more
+              詳細はこちら
               <span></span>
             </a>
           </div>
@@ -296,8 +296,8 @@
       <section class="voice voice-layout" id="voice">
         <div class="voice__inner inner">
           <div class="voice__title section-header">
-            <h2 class="section-header__engtitle">Voice</h2>
-            <p class="section-header__jatitle">お客様の声</p>
+            <h2 class="section-header__engtitle">お客様の声</h2>
+            <p class="section-header__jatitle">Voice</p>
           </div>
           <ul class="voice__list voice-cards">
           <?php
@@ -379,7 +379,7 @@
           </ul>
           <div class="voice__button">
             <a href="/voice" class="button">
-              View more
+              詳細はこちら
               <span></span>
             </a>
           </div>
@@ -389,8 +389,8 @@
       <section class="price price-layout" id="price">
         <div class="price__inner inner">
           <div class="price__title section-header">
-            <h2 class="section-header__engtitle">Price</h2>
-            <p class="section-header__jatitle">料金一覧</p>
+            <h2 class="section-header__engtitle">料金一覧</h2>
+            <p class="section-header__jatitle">Price</p>
           </div>
           <div class="price__content">
             <div class="price__img js-imgBg-change">
@@ -446,7 +446,7 @@
           </div>
           <div class="price__button">
             <a href="/price" class="button">
-              View more
+              詳細はこちら
               <span></span>
             </a>
           </div>

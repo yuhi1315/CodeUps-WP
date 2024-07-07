@@ -252,7 +252,7 @@
           <div class="swiper-button-prev"></div>
           <div class="campaign__button">
             <a href="./campaign.html" class="button">
-              View more
+              詳細はこちら
               <span></span>
             </a>
           </div>
@@ -294,7 +294,7 @@
                 </p>
                 <div class="about-us__button">
                   <a href="./about-us-us.html" class="button">
-                    View more
+                    詳細はこちら
                     <span></span>
                   </a>
                 </div>
@@ -325,7 +325,7 @@
               </p>
               <div class="information__button">
                 <a href="./info.html" class="button">
-                  View more
+                  詳細はこちら
                   <span></span>
                 </a>
               </div>
@@ -417,7 +417,7 @@
           </ul>
           <div class="blog__button">
             <a href="./blog-list.html" class="button">
-              View more
+              詳細はこちら
               <span></span>
             </a>
           </div>
@@ -496,7 +496,7 @@
           </ul>
           <div class="voice__button">
             <a href="./voice.html" class="button">
-              View more
+              詳細はこちら
               <span></span>
             </a>
           </div>
@@ -593,7 +593,7 @@
           </div>
           <div class="price__button">
             <a href="./price.html" class="button">
-              View more
+              詳細はこちら
               <span></span>
             </a>
           </div>
@@ -634,7 +634,7 @@
               <p class="contact__text">ご予約・お問い合わせはコチラ</p>
               <div class="contact__button">
                 <a href="/contact" class="button">
-                  View more
+                  詳細はこちら
                   <span></span>
                 </a>
               </div>

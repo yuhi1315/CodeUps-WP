@@ -27,13 +27,13 @@
             </div>
             <div class="contact__message">
               <div class="contact__title">
-                <h2 class="contact__engtitle">Contact</h2>
-                <p class="contact__jatitle">お問い合せ</p>
+                <h2 class="contact__engtitle">お問い合せ</h2>
+                <p class="contact__jatitle">Contact</p>
               </div>
               <p class="contact__text">ご予約・お問い合わせはコチラ</p>
               <div class="contact__button">
                 <a href="/contact" class="button">
-                  View more
+                  詳細はこちら
                   <span></span>
                 </a>
               </div>

@@ -114,7 +114,7 @@
                     <p class="sidebar__review-age"><?php echo esc_html($voice_age); ?></p>
                     <p class="sidebar__review-title"><?php the_title(); ?></p>
                     <div class="sidebar__review-button">
-                        <a href="<?php the_permalink(); ?>" class="button">View more<span></span></a>
+                        <a href="<?php the_permalink(); ?>" class="button">詳細はこちら<span></span></a>
                     </div>
                 </div>
                 <?php
@@ -222,7 +222,7 @@
                   </a>
                 </div>
                 <div class="sidebar__campaign-button">
-                  <a href="" class="button">View more</a>
+                  <a href="" class="button">詳細はこちら</a>
                 </div>
               </div> -->
               <!-- アーカイブ -->
