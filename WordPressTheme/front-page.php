@@ -1,3 +1,5 @@
+
+<?php get_header(); ?>
 <div class="loading" id="particles-loading">
   <div class="loading_logo">
   <img
@@ -6,7 +8,6 @@
   />
   </div>
 </div>
-<?php get_header(); ?>
     <main>
       <!-- mv -->
      <section class="mv">
