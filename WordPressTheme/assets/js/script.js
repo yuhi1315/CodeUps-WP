@@ -414,6 +414,7 @@ if (sessionStorage.getItem("access")) {
   $(window).on("load", function () {
     $(".loading").fadeOut(function () {});
   });
+  $(".particles-js").fadeOut("slow");
 } else {
   sessionStorage.setItem("access", 0);
 
@@ -429,5 +430,6 @@ if (sessionStorage.getItem("access")) {
     $(".loading")
       .delay(3000)
       .fadeOut("slow", function () {});
+    $(".particles-js").fadeOut("slow");
   });
 }
