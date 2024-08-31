@@ -140,7 +140,6 @@
         ?>
 
       <!-- about us -->
-      <div class="particles-js" id="particles-section"></div>
       <section class="about-us about-us-layout" id="about-us">
         <div class="about-us__inner inner">
           <div class="about-us__title section-header">

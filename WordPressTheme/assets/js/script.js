@@ -410,16 +410,24 @@ function initParticlesJS(elementId) {
 }
 
 // ドキュメントの準備ができたらParticlesJSを各セクションに適用
-$(document).ready(function () {
-  var sections = ["particles-loading", "particles-mv", "particles-section"];
-  sections.forEach(function (section) {
-    initParticlesJS(section);
+if (sessionStorage.getItem("access")) {
+  $(window).on("load", function () {
+    $(".loading").fadeOut(function () {});
   });
-});
+} else {
+  sessionStorage.setItem("access", 0);
 
-$(window).on("load", function () {
-  $(".loading_logo").fadeIn(3000);
-  $(".loading")
-    .delay(3000)
-    .fadeOut("slow", function () {});
-});
+  $(document).ready(function () {
+    var sections = ["particles-loading"];
+    sections.forEach(function (section) {
+      initParticlesJS(section);
+    });
+  });
+
+  $(window).on("load", function () {
+    $(".loading_logo").fadeIn(3000);
+    $(".loading")
+      .delay(3000)
+      .fadeOut("slow", function () {});
+  });
+}
