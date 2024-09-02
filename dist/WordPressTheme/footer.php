@@ -125,7 +125,7 @@
         </div>
       </div>
       <p class="footer__copy-right">
-        Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.
+        Copyright © 2021 - 2024 Matsunomi LLC. All Rights Reserved.
       </p>
     </footer>
   </body>

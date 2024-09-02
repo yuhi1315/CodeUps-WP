@@ -46,7 +46,7 @@
       <div class="footer__inner inner">
         <div class="footer__top">
           <div class="footer__logo">
-            <a href="index">
+            <a href="/">
               <img
                 src="<?php echo get_theme_file_uri(); ?>/assets/images/common/matsunomi-logo.png"
                 alt="CodeUpsのロゴ"
@@ -98,9 +98,9 @@
           </div>
           <div class="grobal-nav__container">
             <ul class="grobal-nav__items">
-              <li class="grobal-nav__item">
+              <!-- <li class="grobal-nav__item">
                 <a href="/sitemap">サイトマップ</a>
-              </li>
+              </li> -->
               <li class="grobal-nav__item">
                 <a href="/price">料金一覧</a>
                 <a href="/price#price-1">DRT整体</a>
@@ -125,7 +125,7 @@
         </div>
       </div>
       <p class="footer__copy-right">
-        Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.
+      Copyright © 2021 - 2024 Matsunomi LLC. All Rights Reserved.
       </p>
     </footer>
     <?php wp_footer(); ?>
